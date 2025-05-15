@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Direction-based padding/margin utilities */
+.rtl\:mr-8 {
+  margin-right: 2rem;
+}
+
+.rtl\:space-x-reverse > * + * {
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* Arabic font optimization */
+@font-face {
+  font-family: 'Arabic';
+  src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-arabic {
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Custom utility classes */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
